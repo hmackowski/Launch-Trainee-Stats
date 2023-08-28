@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MainNav from "./components/MainNav";
+import LandingPage from "./components/LandingPage";
+import Trainees from "./components/Trainees";
+import TraineeProfile from "./components/TraineeProfile";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <MainNav />
+      {/* Move the Router component here to wrap the entire app */}
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<LandingPage /> }/>
+          <Route path="/trainees" element={<Trainees /> }/>
+          <Route path="/traineeProfile" element={<TraineeProfile />}/>
+
+
+          {/* If no matching route found, show PageNotFound component */}
+
+        </Routes>
+
+        {/* Footer component */}
+
+      </div>
+    </Router>
   );
 }
 
