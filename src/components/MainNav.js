@@ -3,13 +3,14 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import "../nav.css";
+import launchLogo from "../images/Launch_Logo_.jpg"
 
 function MainNav() {
   return (
     <Navbar expand="lg" className="custom-navbar">
       <Container>
         {/* Brand logo with a link to the home page */}
-        <Navbar.Brand href="/"></Navbar.Brand>
+        <Navbar.Brand href="/"><img className="launchLogo" src={launchLogo}></img></Navbar.Brand>
         {/* Hamburger icon for toggling the navbar on smaller screens */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
