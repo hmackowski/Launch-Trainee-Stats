@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage /> }/>
           <Route path="/trainees" element={<Trainees /> }/>
-          <Route path="/traineeProfile" element={<TraineeProfile />}/>
+          <Route path="/traineeProfile/:key" element={<TraineeProfile />}/>
 
 
           {/* If no matching route found, show PageNotFound component */}
