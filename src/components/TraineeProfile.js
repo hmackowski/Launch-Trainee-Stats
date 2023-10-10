@@ -4,6 +4,8 @@ import axios from "axios";
 import { Container, Row, Col, Table } from "react-bootstrap";
 import profileImg from "../images/empty-profile.png";
 import Ratings from "./Ratings";
+import TraineeNotes from "./TraineeNotes";
+import TraineePhases from "./TraineePhases";
 
 function TraineeProfile() {
   // Destructure the key directly from useParams
@@ -74,6 +76,7 @@ function TraineeProfile() {
                     </li>
                   </ul>
                 </div>
+                <TraineePhases traineeData={data} />
               </Row>
             </Container>
           </Col>
@@ -81,6 +84,7 @@ function TraineeProfile() {
           {/* Center Content: Ratings */}
           <Col md={6}>
             <Ratings traineeData={data} />
+            <TraineeNotes traineeId={data.trainee.traineeId}/>
           </Col>
 
           <Col md={2}>

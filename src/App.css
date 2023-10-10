@@ -92,3 +92,12 @@ ul.no-bullets {
   justify-content: center;
 
 }
+
+.trainee-notes{
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.trainee-phase-progressbar{
+  margin: 5px;
+}
