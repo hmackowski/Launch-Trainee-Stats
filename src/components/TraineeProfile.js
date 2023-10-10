@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import {Container,  Row,  Col,  Table,} from "react-bootstrap";
+import { Container, Row, Col, Table } from "react-bootstrap";
 import profileImg from "../images/empty-profile.png";
 import Ratings from "./Ratings";
 
@@ -79,10 +79,11 @@ function TraineeProfile() {
           </Col>
 
           {/* Center Content: Ratings */}
-          <Ratings data={data}/>
-          
+          <Col md={6}>
+            <Ratings data={data} />
+          </Col>
 
-          <Col md={3}>
+          <Col md={2}>
             <Table striped bordered hover>
               <thead>
                 <tr>
