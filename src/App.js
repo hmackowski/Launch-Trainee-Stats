@@ -5,6 +5,7 @@ import MainNav from "./components/MainNav";
 import LandingPage from "./components/LandingPage";
 import Trainees from "./components/Trainees";
 import TraineeProfile from "./components/TraineeProfile";
+import InputRatings from "./components/InputRatings";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<LandingPage /> }/>
           <Route path="/trainees" element={<Trainees /> }/>
           <Route path="/traineeProfile/:key" element={<TraineeProfile />}/>
+          <Route path="/inputTraineeRating" element={<InputRatings />}/>
 
 
           {/* If no matching route found, show PageNotFound component */}

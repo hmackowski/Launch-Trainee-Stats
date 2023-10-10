@@ -26,7 +26,7 @@ function MainNav() {
             <Nav.Link className="nav-links" href="/trainees">
               Launch Trainees
             </Nav.Link>
-            <Nav.Link className="nav-links" href="/trainees">
+            <Nav.Link className="nav-links" href="/inputTraineeRating">
               Input Ratings
             </Nav.Link>
           </Nav>

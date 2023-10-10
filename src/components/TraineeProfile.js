@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { Container, Row, Col, Table } from "react-bootstrap";
+import {Container,  Row,  Col,  Table,} from "react-bootstrap";
 import profileImg from "../images/empty-profile.png";
+import Ratings from "./Ratings";
 
 function TraineeProfile() {
   // Destructure the key directly from useParams
@@ -19,6 +20,8 @@ function TraineeProfile() {
         `http://localhost:8080/trainees/${key}/profile`
       );
       setData(response.data);
+      console.log(`Text`);
+      console.log(data);
     } catch (err) {
       console.error("Error fetching data:", err);
       setError("Failed to fetch trainee profile. Please try again later.");
@@ -42,60 +45,86 @@ function TraineeProfile() {
 
   return (
     <div>
-      <h1>{data.trainee?.firstName}  {data.trainee?.lastName}'s Profile</h1>
-      <p>Hire Date: {data.trainee?.hireDate}</p>
+      <h1>
+        {data.trainee?.firstName} {data.trainee?.lastName}'s Profile
+      </h1>
+      <h4>{data.trainee?.traineeTitle}</h4>
 
-      <Container fluid>
+      <Container fluid className="profile-container">
         <Row>
           {/* Left Sidebar */}
-          <Col md={3} className="bg-light">
-            <h3>
-              <img className="profilePic" src={profileImg} />
-            </h3>
-            <br />
-            <ul className="no-bullets">
-              <li>
-                <a href="">{data.trainee?.firstName} {data.trainee?.lastName}'s Stats</a>
-              </li>
-              <li>
-                <a href="">Attendance</a>
-              </li>
-            </ul>
+          <Col md={3} className="profile-sidebar">
+            <Container>
+              <Row>
+                <img className="profilePic" src={profileImg} />
+                <p>Hire Date: {data.trainee?.hireDate}</p>
+              </Row>
+              <br />
+              <Row>
+                <div className="profile-links bg-light">
+                  <ul className="no-bullets">
+                    <li>
+                      <a href="">
+                        {data.trainee?.firstName} {data.trainee?.lastName}'s
+                        Stats
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">Attendance</a>
+                    </li>
+                  </ul>
+                </div>
+              </Row>
+            </Container>
           </Col>
 
-          {/* Main Content */}
-          <Col md={8}>
-            <h3>Main Content</h3>
+          {/* Center Content: Ratings */}
+          <Ratings data={data}/>
+          
+
+          <Col md={3}>
             <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Column 1</th>
-          <th>Column 2</th>
-          <th>Column 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Row 1 Data 1</td>
-          <td>Row 1 Data 2</td>
-          <td>Row 1 Data 3</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Row 2 Data 1</td>
-          <td>Row 2 Data 2</td>
-          <td>Row 2 Data 3</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Row 3 Data 1</td>
-          <td>Row 3 Data 2</td>
-          <td>Row 3 Data 3</td>
-        </tr>
-      </tbody>
-    </Table>
+              <thead>
+                <tr>
+                  <th className="">Rating</th>
+                  <th className="">Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CK</td>
+                  <td>Classroom Knowledge</td>
+                </tr>
+                <tr>
+                  <td>WPS</td>
+                  <td>Water Piping Skill</td>
+                </tr>
+                <tr>
+                  <td>DIS</td>
+                  <td>DWV Installation Skill</td>
+                </tr>
+                <tr>
+                  <td>PCT</td>
+                  <td>Punctuality</td>
+                </tr>
+                <tr>
+                  <td>TMW</td>
+                  <td>Teamwork</td>
+                </tr>
+                <tr>
+                  <td>PSL</td>
+                  <td>Problem-solving</td>
+                </tr>
+                <tr>
+                  <td>COM</td>
+                  <td>Communication</td>
+                </tr>
+                <tr>
+                  <td>PA</td>
+                  <td>Progress & Adaptability</td>
+                </tr>
+              </tbody>
+            </Table>
           </Col>
         </Row>
       </Container>

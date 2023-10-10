@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -41,16 +42,53 @@ h2 {
   color: black;
 }
 
-.launchLogo{
+.launchLogo {
   height: 50px;
 }
 
 ul.no-bullets {
-  list-style-type: none; /* Remove bullets */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margins */
+  list-style-type: none;
+  /* Remove bullets */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margins */
 }
 
-.profilePic{
-  margin: 5px;
+.profilePic {
+  margin-top: 5px;
+}
+
+.profile-rating-column {
+  width: 75px;
+  /* Adjust this value as needed */
+}
+
+.profile-score-column {
+  width: 400px;
+  /* Adjust this value as needed */
+}
+
+.profile-actions-column {
+  width: 250px;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.profile-links {
+  display: flex;
+  justify-content: center;
+  width: 440px !important;
+  background-color: #d4d4d4;
+  /* border: 2px solid rgb(111, 0, 255); */
+}
+
+.profile-sidebar {
+  /* border: 2px solid red; */
+  justify-content: center;
+
 }
