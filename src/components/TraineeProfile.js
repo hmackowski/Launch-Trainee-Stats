@@ -80,7 +80,7 @@ function TraineeProfile() {
 
           {/* Center Content: Ratings */}
           <Col md={6}>
-            <Ratings data={data} />
+            <Ratings traineeData={data} />
           </Col>
 
           <Col md={2}>

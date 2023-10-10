@@ -1,7 +1,7 @@
 import React from "react";
 import { Table, Button, ProgressBar } from "react-bootstrap";
 
-function Ratings({ data }) {
+function Ratings({ traineeData }) {
   function determineVariant(value) {
     if (value <= 60) {
       return "danger";
@@ -14,10 +14,10 @@ function Ratings({ data }) {
 
   return (
     <div className="ratings-component">
-      <h3>Overall Rating: {data.trainee.overallRating}</h3>
+      <h3>Overall Rating: {traineeData.trainee.overallRating}</h3>
       <ProgressBar
-        variant={determineVariant(data.trainee.overallRating)}
-        now={data.trainee.overallRating}
+        variant={determineVariant(traineeData.trainee.overallRating)}
+        now={traineeData.trainee.overallRating}
       />
       <Table striped bordered hover>
         <thead>
@@ -34,13 +34,13 @@ function Ratings({ data }) {
             <td>
               <ProgressBar
                 max={99}
-                animated={data.trainee.ckScore >= 90}
-                variant={determineVariant(data.trainee.ckScore)}
-                now={data.trainee.ckScore}
+                animated={traineeData.trainee.ckScore >= 90}
+                variant={determineVariant(traineeData.trainee.ckScore)}
+                now={traineeData.trainee.ckScore}
               />{" "}
             </td>
             <td>
-              <p>{data.trainee.ckScore}</p>
+              <p>{traineeData.trainee.ckScore}</p>
             </td>
             <td>
               <Button>Update</Button> <Button variant="danger">Clear</Button>
@@ -51,105 +51,105 @@ function Ratings({ data }) {
             <td>
               <ProgressBar
                 max={99}
-                animated={data.trainee.wpsScore >= 90}
-                variant={determineVariant(data.trainee.wpsScore)}
-                now={data.trainee.wpsScore}
+                animated={traineeData.trainee.wpsScore >= 90}
+                variant={determineVariant(traineeData.trainee.wpsScore)}
+                now={traineeData.trainee.wpsScore}
               />
             </td>
             <td>
-              <p>{data.trainee.wpsScore}</p>
+              <p>{traineeData.trainee.wpsScore}</p>
             </td>
-            <td>Row 3 Data 2</td>
+            <td>Row 3 traineeData 2</td>
           </tr>
           <tr>
             <td>DIS</td>
             <td>
               <ProgressBar
                 max={99}
-                animated={data.trainee.disScore >= 90}
-                variant={determineVariant(data.trainee.disScore)}
-                now={data.trainee.disScore}
+                animated={traineeData.trainee.disScore >= 90}
+                variant={determineVariant(traineeData.trainee.disScore)}
+                now={traineeData.trainee.disScore}
               />
             </td>
             <td>
-              <p>{data.trainee.disScore}</p>
+              <p>{traineeData.trainee.disScore}</p>
             </td>
-            <td>Row 3 Data 2</td>
+            <td>Row 3 traineeData 2</td>
           </tr>
           <tr>
             <td>PCT</td>
             <td>
               <ProgressBar
                 max={99}
-                animated={data.trainee.pctScore >= 90}
-                variant={determineVariant(data.trainee.pctScore)}
-                now={data.trainee.pctScore}
+                animated={traineeData.trainee.pctScore >= 90}
+                variant={determineVariant(traineeData.trainee.pctScore)}
+                now={traineeData.trainee.pctScore}
               />
             </td>
             <td>
-              <p>{data.trainee.pctScore}</p>
+              <p>{traineeData.trainee.pctScore}</p>
             </td>
-            <td>Row 3 Data 2</td>
+            <td>Row 3 traineeData 2</td>
           </tr>
           <tr>
             <td>TMW</td>
             <td>
               <ProgressBar
                 max={99}
-                animated={data.trainee.tmwScore >= 90}
-                variant={determineVariant(data.trainee.tmwScore)}
-                now={data.trainee.tmwScore}
+                animated={traineeData.trainee.tmwScore >= 90}
+                variant={determineVariant(traineeData.trainee.tmwScore)}
+                now={traineeData.trainee.tmwScore}
               />
             </td>
             <td>
-              <p>{data.trainee.tmwScore}</p>
+              <p>{traineeData.trainee.tmwScore}</p>
             </td>
-            <td>Row 3 Data 2</td>
+            <td>Row 3 traineeData 2</td>
           </tr>
           <tr>
             <td>PSL</td>
             <td>
               <ProgressBar
                 max={99}
-                animated={data.trainee.pslScore >= 90}
-                variant={determineVariant(data.trainee.pslScore)}
-                now={data.trainee.pslScore}
+                animated={traineeData.trainee.pslScore >= 90}
+                variant={determineVariant(traineeData.trainee.pslScore)}
+                now={traineeData.trainee.pslScore}
               />
             </td>
             <td>
-              <p>{data.trainee.pslScore}</p>
+              <p>{traineeData.trainee.pslScore}</p>
             </td>
-            <td>Row 3 Data 2</td>
+            <td>Row 3 traineeData 2</td>
           </tr>
           <tr>
             <td>COM</td>
             <td>
               <ProgressBar
                 max={99}
-                animated={data.trainee.comScore >= 90}
-                variant={determineVariant(data.trainee.comScore)}
-                now={data.trainee.comScore}
+                animated={traineeData.trainee.comScore >= 90}
+                variant={determineVariant(traineeData.trainee.comScore)}
+                now={traineeData.trainee.comScore}
               />
             </td>
             <td>
-              <p>{data.trainee.comScore}</p>
+              <p>{traineeData.trainee.comScore}</p>
             </td>
-            <td>Row 3 Data 2</td>
+            <td>Row 3 traineeData 2</td>
           </tr>
           <tr>
             <td>PA</td>
             <td>
               <ProgressBar
                 max={99}
-                animated={data.trainee.paScore >= 90}
-                variant={determineVariant(data.trainee.paScore)}
-                now={data.trainee.paScore}
+                animated={traineeData.trainee.paScore >= 90}
+                variant={determineVariant(traineeData.trainee.paScore)}
+                now={traineeData.trainee.paScore}
               />
             </td>
             <td>
-              <p>{data.trainee.paScore}</p>
+              <p>{traineeData.trainee.paScore}</p>
             </td>
-            <td>Row 3 Data 2</td>
+            <td>Row 3 traineeData 2</td>
           </tr>
         </tbody>
       </Table>
