@@ -93,11 +93,6 @@ ul.no-bullets {
 
 }
 
-.trainee-notes{
-  border: 1px solid black;
-  border-radius: 15px;
-}
-
-.trainee-phase-progressbar{
+.trainee-phase-progressbar {
   margin: 5px;
 }

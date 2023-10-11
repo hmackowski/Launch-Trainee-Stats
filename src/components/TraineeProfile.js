@@ -22,15 +22,11 @@ function TraineeProfile() {
         `http://localhost:8080/trainees/${key}/profile`
       );
       setData(response.data);
-      console.log(`Text`);
-      console.log(data);
     } catch (err) {
       console.error("Error fetching data:", err);
       setError("Failed to fetch trainee profile. Please try again later.");
     }
   };
-
-  console.log(data);
 
   useEffect(() => {
     fetchData();
@@ -84,7 +80,7 @@ function TraineeProfile() {
           {/* Center Content: Ratings */}
           <Col md={6}>
             <Ratings traineeData={data} />
-            <TraineeNotes traineeId={data.trainee.traineeId}/>
+            <TraineeNotes traineeId={data.trainee.traineeId} />
           </Col>
 
           <Col md={2}>
