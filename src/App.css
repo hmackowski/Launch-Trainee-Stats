@@ -96,3 +96,22 @@ ul.no-bullets {
 .trainee-phase-progressbar {
   margin: 5px;
 }
+
+@media (max-width: 768px) {
+  .responsive-table td, .responsive-table th {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    word-break: break-word;
+  }
+  .responsive-table .hide-on-mobile {
+    display: none;
+  }
+}
+
+.trainee-row{
+  justify-content: center;
+}
+
+.profile-update-button{
+  margin-left: 5px;
+}

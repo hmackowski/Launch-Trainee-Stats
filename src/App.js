@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<LandingPage /> }/>
           <Route path="/trainees" element={<Trainees /> }/>
           <Route path="/traineeProfile/:key" element={<TraineeProfile />}/>
-          <Route path="/inputTraineeRating" element={<InputRatings />}/>
+          <Route path="/inputTraineeRating/:traineeId" element={<InputRatings />}/>
           <Route path="*" element={<Page404 />}/>
 
 

@@ -41,6 +41,7 @@ function TraineeProfile() {
     return <div>Loading...</div>;
   }
 
+  console.log(data);
   return (
     <div>
       <h1>
